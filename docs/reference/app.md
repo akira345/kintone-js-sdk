@@ -987,7 +987,7 @@ Promise
 | --- | --- | --- | --- |
 | params | Object | yes | Params to add form fields.
 | params.app | Integer | yes | The app ID
-| params.fields | 	JSONObject | yes | The formFields which will add to form of kintone app. About the format, please look the sample below or [reference](#reference) at the end of this  |
+| params.properties | 	JSONObject | yes | The formFields which will add to form of kintone app. About the format, please look the sample below or [reference](#reference) at the end of this  |
 | params.revision | Integer | (optional) | Specify the revision number of the settings that will be deployed.
 
 **Return**
@@ -1004,7 +1004,7 @@ Promise
 <pre class="inline-code">
 
   var app = YOUR_APP_ID;
-  var fields = {
+  var properties = {
     'YOUR_FIELD_CODE': {
       'type': 'SINGLE_LINE_TEXT',
       'code': 'YOUR_FIELD_CODE',
@@ -1016,7 +1016,7 @@ Promise
     // Another field here
   };
   var revision = 'YOUR_SETTINGS_REVISION';
-  kintoneApp.addFormFields({app, fields, revision}).then((rsp) => {
+  kintoneApp.addFormFields({app, properties, revision}).then((rsp) => {
     console.log(rsp);
   }).catch((err) => {
     // This SDK return err with KintoneAPIException
@@ -1030,7 +1030,7 @@ Promise
 <pre class="inline-code">
 
   const app = YOUR_APP_ID;
-  const fields = {
+  const properties = {
     'YOUR_FIELD_CODE': {
       'type': 'SINGLE_LINE_TEXT',
       'code': 'YOUR_FIELD_CODE',
@@ -1042,7 +1042,7 @@ Promise
     // Another field here
   };
   const revision = 'YOUR_SETTINGS_REVISION';
-  kintoneApp.addFormFields({app, fields, revision}).then((rsp) => {
+  kintoneApp.addFormFields({app, properties, revision}).then((rsp) => {
     console.log(rsp);
   }).catch((err) => {
     // This SDK return err with KintoneAPIException
@@ -1067,7 +1067,7 @@ Promise
 | --- | --- | --- | --- |
 | params | Object | yes | Params to update form fields.
 | params.app | Integer | yes | The app ID
-| params.fields | 	JSONObject | yes | The formFields which will add to form of kintone app. About the format, please look the sample below or [reference](#reference) at the end of this  |
+| params.properties | 	JSONObject | yes | The formFields which will add to form of kintone app. About the format, please look the sample below or [reference](#reference) at the end of this  |
 | params.revision | Integer | (optional) | Specify the revision number of the settings that will be deployed.
 
 **Return**
@@ -1084,7 +1084,7 @@ Promise
 <pre class="inline-code">
 
   var app = YOUR_APP_ID;
-  var fields = {
+  var properties = {
     'YOUR_FIELD_CODE': {
       'type': 'SINGLE_LINE_TEXT',
       'code': 'YOUR_FIELD_CODE',
@@ -1096,7 +1096,7 @@ Promise
     // Another field here
   };
   var revision = 'the_revision_of_the_settings ';
-  kintoneApp.updateFormFields({app, fields, revision}).then((rsp) => {
+  kintoneApp.updateFormFields({app, properties, revision}).then((rsp) => {
     console.log(rsp);
   }).catch((err) => {
     // This SDK return err with KintoneAPIException
@@ -1110,7 +1110,7 @@ Promise
 <pre class="inline-code">
 
   const app = YOUR_APP_ID;
-  const fields = {
+  const properties = {
     'YOUR_FIELD_CODE': {
       'type': 'SINGLE_LINE_TEXT',
       'code': 'YOUR_FIELD_CODE',
@@ -1122,7 +1122,7 @@ Promise
     // Another field here
   };
   const revision = 'YOUR_SETTINGS_REVISION';
-  kintoneApp.updateFormFields({app, fields, revision}).then((rsp) => {
+  kintoneApp.updateFormFields({app, properties, revision}).then((rsp) => {
     console.log(rsp);
   }).catch((err) => {
     // This SDK return err with KintoneAPIException
